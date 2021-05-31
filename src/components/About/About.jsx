@@ -2,8 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
-import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
@@ -30,7 +30,7 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
-                <AboutImg alt="profile picture" filename={img} />
+                <StaticImage src="../../images/profile.jpg" alt="profile picture"  />
               </div>
             </Fade>
           </Col>
@@ -56,7 +56,7 @@ const About = () => {
                       className="cta-btn cta-btn--resume"
                       href={resume}
                     >
-                      Resume
+                      ブログ
                     </a>
                   </span>
                 )}
